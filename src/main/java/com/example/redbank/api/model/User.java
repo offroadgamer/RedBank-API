@@ -4,12 +4,14 @@ public class User {
     private String email;
     private String password;
     private int userID;
+    private int id;
 
-    public User(String email, String password) {
+    public User(String email, String password, int id) {
         this.email = email;
         this.password = password;
         double userID = Math.floor(Math.random() * 100_000);
         this.userID = (int) userID;
+        this.id = id;
     }
 
     public String getEmail() {
@@ -22,6 +24,10 @@ public class User {
 
     public int getUserID() {
         return userID;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public void setEmail(String email) {
